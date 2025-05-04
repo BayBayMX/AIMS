@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct GameDescriptionView: View {
-    @EnvironmentObject var gameData: GameData
+    //@EnvironmentObject var workViewModel: WorkViewModel
 
     var body: some View {
         ZStack {
-            Image("description_background") // ミステリーな雰囲気の背景画像
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
+//            Image("description_background") // ミステリーな雰囲気の背景画像
+//                .resizable()
+//                .scaledToFill()
+//                .ignoresSafeArea()
             ScrollView {
-                Text(gameData.descriptionText)
-                    .font(.body)
-                    .padding()
-                    .foregroundColor(.white)
+//                Text(gameData.descriptionText)
+//                    .font(.body)
+//                    .padding()
+//                    .foregroundColor(.white)
             }
         }
         .navigationTitle("ゲーム説明")
@@ -31,6 +31,6 @@ struct GameDescriptionView: View {
 struct GameDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
         GameDescriptionView()
-            .environmentObject(GameData())
+            .environmentObject(WorkViewModel())
     }
 }
